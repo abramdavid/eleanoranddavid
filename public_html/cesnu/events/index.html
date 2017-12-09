@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="/cesnu/css/main.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body, html {
+    height: 100%;
+}
+
+html { 
+	background: url(img/website_llama_edited.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-size: 200%;
+}
+
+article {
+    position: relative;
+    top: 10%;
+    border-radius: 25px;
+    background: #666;
+    width: 70%;
+    margin: auto;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+</style>
+</head>
+
+<body>
+<!--Navigation bar-->
+<div class="topnav-container">
+  <ul class="topnav">
+      <li><a href="/cesnu/">Home</a></li>
+      <li><a href="/cesnu/OurStory/">Our Story</a></li>
+      <li><a href="/cesnu/events/">Events</a></li>
+      <li><a href="/cesnu/directions/">Directions</a></li>
+      <li><a href="/cesnu/registry/">Registry</a></li>
+      <li><a href="/cesnu/rsvp/">RSVP</a></li>
+  </ul>
+</div>
+
+<script>
+// Sets active link in Bootstrap menu
+// Add this code in a central place used\shared by all pages
+// like your _Layout.cshtml in ASP.NET MVC for example
+$('a[href="' + this.location.pathname + '"]').addClass('active');
+</script>
+
+<article>
+<p>The ceremony and reception will take place on Saturday, June 9th, 2018 at the Brooklyn Society for Ethical Culture.
+<br/>
+<br/>
+Ceremony: Doors open at 5pm, be in seats by 5:30pm<br/>
+Reception: 7pm - 11pm<br/>
+
+<br/>
+Sunday Brunch: TBD
+</p>
+    
+</article>
+</body>
+</html>
