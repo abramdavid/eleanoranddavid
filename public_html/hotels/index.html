@@ -10,16 +10,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Mallanna" />
+      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Mallanna" />
     
-    <style>
-    body, html, .bg {
-        height: 100%;
-    }
-    
+     <style>
+        body, html, .bg {
+            height: 100%;
+        }
     @media screen and (min-width: 480px) {
         .bg { 
-        	background: url(img/homepage.jpg) no-repeat center right fixed; 
+        	background: url(img/hotels.jpg) no-repeat center center fixed; 
         	-webkit-background-size: cover;
         	-moz-background-size: cover;
         	-o-background-size: cover;
@@ -29,14 +28,14 @@
     
     @media screen and (max-width: 480px) {
         .bg { 
-        	background: url(img/mobileHomepage.jpg) no-repeat center right fixed; 
+        	background: url(img/mobileHotels.jpg) no-repeat center center fixed; 
         	-webkit-background-size: cover;
         	-moz-background-size: cover;
         	-o-background-size: cover;
         	background-size: cover;
         }
     }
-    </style>
+	</style>
   </head>
 
   <body>
@@ -55,43 +54,25 @@
                 <li><a href="/OurStory/">Our Story</a></li>
                 <li><a href="/events/">Events</a></li>
                 <li><a href="/directions/">Directions</a></li>
-                <li><a href="/hotels/">Hotels</a></li>
+                <li><a class="active"  href="/hotels/">Hotels</a></li>
                 <li><a href="/registry/">Registry</a></li>
                 <li><a href="/rsvp/">RSVP</a></li>
               </ul>
             </div>
           </div>
         </nav>
-        
-        <div class="bg" id="bg-home">
-                <div id="home-date">June 9, 2018</div>
-                
-            <audio id="contra_audio" src="contra.mp3" loop="loop"></audio>
+    
+        <div class="bg">
+            <article id="hotels-article">
+                <p>We have reserved a block of rooms at the Hampton Inn for Friday and Saturday night at reduced rates.  If you would like to book one of these rooms, you may do so <a href="http://hamptoninn.hilton.com/en/hp/groups/personalized/N/NYCBOHX-CAW-20180608/index.jhtml?WT.mc_id=POG" target="_blank">here</a> before May 18.<br/>For more than two nights at the reduced rate, you will need to call the hotel and ask for their availability.
+                </p>
+            </article>
         </div>
-        
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
         <script src="/js/onResize.js"></script>
-                <script src="//cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js"
-        type="text/javascript"></script>
-            <script src="js/cheatCode.js"></script>
-<!--
-    
-        .-"-.           .-"-.
-      .'=^=^='.       .'=^=^='.
-     /=^=^=^=^=\     /=^=^=^=^=\
-    :^=YouLost=^;   :^= Happy =^;
-    |^ TheGame ^|   |^ Easter! ^|
-    :^=^=^=^=^=^:   :^=^=^=^=^=^:
-     \=^=^=^=^=/     \=^=^=^=^=/
-      `.=^=^=.'       `.=^=^=.'
-        `~~~`           `~~~`
-        
-        https://en.wikipedia.org/wiki/Konami_Code
-
--->
-</body>
+    </body>
 </html>

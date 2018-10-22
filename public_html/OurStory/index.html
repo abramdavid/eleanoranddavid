@@ -11,32 +11,42 @@
     
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Mallanna" />
-    
-    <style>
-    body, html, .bg {
-        height: 100%;
+    <script language="Javascript">
+    <!--
+    function ShowPicture(id,Source) {
+    if (Source=="1"){
+    if (document.layers) document.layers[''+id+''].visibility = "show"
+    else if (document.all) document.all[''+id+''].style.visibility = "visible"
+    else if (document.getElementById) document.getElementById(''+id+'').style.visibility = "visible"
     }
-    
-    @media screen and (min-width: 480px) {
+    else
+    if (Source=="0"){
+    if (document.layers) document.layers[''+id+''].visibility = "hide"
+    else if (document.all) document.all[''+id+''].style.visibility = "hidden"
+    else if (document.getElementById) document.getElementById(''+id+'').style.visibility = "hidden"
+    }
+    }
+    //-->
+    </script>
+    <style type="text/css">
+    #Style {
+        position:absolute;
+        top:0;
+        margin:auto;
+        width: 50%;
+        visibility:hidden;
+    }
+        body, html, .bg {
+            height: 100%;
+        }
         .bg { 
-        	background: url(img/homepage.jpg) no-repeat center right fixed; 
+        	background: url(img/our_story.jpg) no-repeat center center fixed; 
         	-webkit-background-size: cover;
         	-moz-background-size: cover;
         	-o-background-size: cover;
         	background-size: cover;
-        }
-    }
-    
-    @media screen and (max-width: 480px) {
-        .bg { 
-        	background: url(img/mobileHomepage.jpg) no-repeat center right fixed; 
-        	-webkit-background-size: cover;
-        	-moz-background-size: cover;
-        	-o-background-size: cover;
-        	background-size: cover;
-        }
-    }
-    </style>
+    	}
+	</style>
   </head>
 
   <body>
@@ -52,7 +62,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li><a href="/OurStory/">Our Story</a></li>
+                <li><a class="active" href="/OurStory/">Our Story</a></li>
                 <li><a href="/events/">Events</a></li>
                 <li><a href="/directions/">Directions</a></li>
                 <li><a href="/hotels/">Hotels</a></li>
@@ -63,35 +73,31 @@
           </div>
         </nav>
         
-        <div class="bg" id="bg-home">
-                <div id="home-date">June 9, 2018</div>
-                
-            <audio id="contra_audio" src="contra.mp3" loop="loop"></audio>
+        <div class="bg" id="ourstory-bg">
+            <div style="margin:20px 0px 0px 0px; position:fixed;width:100%;height:50px">
+                <div class="col-xs-6 text-center">
+                    <div>
+                        <button type="button" id="first-date-button" class="btn btn-lg" onclick="storyClick(this.id)">The First Date</button>
+                    </div>
+                </div>
+                <div class="col-xs-6 text-center">   
+                    <div>
+                        <button type="button" id="proposal-button" class="btn btn-lg" onclick="storyClick(this.id)">The Proposal</button>
+                    </div>
+                </div>
+            </div>
+            
+            <article id="ourstory-article" style="display: none;margin-top:75px;">
+                <p id="story_text"></p>
+            </article>
         </div>
-        
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
         <script src="/js/onResize.js"></script>
-                <script src="//cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js"
-        type="text/javascript"></script>
-            <script src="js/cheatCode.js"></script>
-<!--
-    
-        .-"-.           .-"-.
-      .'=^=^='.       .'=^=^='.
-     /=^=^=^=^=\     /=^=^=^=^=\
-    :^=YouLost=^;   :^= Happy =^;
-    |^ TheGame ^|   |^ Easter! ^|
-    :^=^=^=^=^=^:   :^=^=^=^=^=^:
-     \=^=^=^=^=/     \=^=^=^=^=/
-      `.=^=^=.'       `.=^=^=.'
-        `~~~`           `~~~`
-        
-        https://en.wikipedia.org/wiki/Konami_Code
-
--->
-</body>
+        <script src="js/storyClick.js"></script>
+        </body>
 </html>
+	

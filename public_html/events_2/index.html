@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+    <head>
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
@@ -13,33 +13,20 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Mallanna" />
     
     <style>
-    body, html, .bg {
-        height: 100%;
-    }
-    
-    @media screen and (min-width: 480px) {
+        body, html, .bg {
+            height: 100%;
+        }
+        
         .bg { 
-        	background: url(img/homepage.jpg) no-repeat center right fixed; 
+        	background: url(img/website_llama_edited.png) no-repeat center center fixed; 
         	-webkit-background-size: cover;
         	-moz-background-size: cover;
         	-o-background-size: cover;
         	background-size: cover;
-        }
-    }
-    
-    @media screen and (max-width: 480px) {
-        .bg { 
-        	background: url(img/mobileHomepage.jpg) no-repeat center right fixed; 
-        	-webkit-background-size: cover;
-        	-moz-background-size: cover;
-        	-o-background-size: cover;
-        	background-size: cover;
-        }
-    }
-    </style>
+    	}
+        	</style>
   </head>
-
-  <body>
+    <body>
       <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container-fluid">
             <div class="navbar-header">
@@ -53,7 +40,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav">
                 <li><a href="/OurStory/">Our Story</a></li>
-                <li><a href="/events/">Events</a></li>
+                <li><a class="active" href="/events_2/">Events</a></li>
                 <li><a href="/directions/">Directions</a></li>
                 <li><a href="/hotels/">Hotels</a></li>
                 <li><a href="/registry/">Registry</a></li>
@@ -62,36 +49,21 @@
             </div>
           </div>
         </nav>
-        
-        <div class="bg" id="bg-home">
-                <div id="home-date">June 9, 2018</div>
-                
-            <audio id="contra_audio" src="contra.mp3" loop="loop"></audio>
+    
+        <div class="bg">
+            <article id="events-article">
+                <p>The wedding ceremony will take place at 5:30pm on Saturday, June 9, 2018, at the Brooklyn Society for Ethical Culture.  Guests are welcome to arrive as early as 5pm.  A dinner reception will follow the ceremony, until 11pm.
+                    <br/>
+                    <br/>
+                    If the weather is nice on Sunday, June 10, we will host a bagel brunch for everyone from 10:30am to 2pm at the northwest side of Prospect Park, a few blocks from the venue. We recommend entering from Grand Army Plaza and walking into the park, as we will be close by at <a href="https://www.google.com/maps/place/40%C2%B040'13.0%22N+73%C2%B058'14.0%22W/@40.6727627,-73.9756717,16z/data=!4m9!1m2!10m1!1e2!3m5!1s0x89c25b08a346236d:0x7005eae02b4cd131!7e2!8m2!3d40.6702828!4d-73.9705624">this location</a>.
+                </p>
+            </article>
         </div>
-        
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
         <script src="/js/onResize.js"></script>
-                <script src="//cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js"
-        type="text/javascript"></script>
-            <script src="js/cheatCode.js"></script>
-<!--
-    
-        .-"-.           .-"-.
-      .'=^=^='.       .'=^=^='.
-     /=^=^=^=^=\     /=^=^=^=^=\
-    :^=YouLost=^;   :^= Happy =^;
-    |^ TheGame ^|   |^ Easter! ^|
-    :^=^=^=^=^=^:   :^=^=^=^=^=^:
-     \=^=^=^=^=/     \=^=^=^=^=/
-      `.=^=^=.'       `.=^=^=.'
-        `~~~`           `~~~`
-        
-        https://en.wikipedia.org/wiki/Konami_Code
-
--->
-</body>
+        </body>
 </html>

@@ -1,3 +1,6 @@
+<?php session_start();?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,37 +12,26 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Mallanna" />
     
-    <style>
-    body, html, .bg {
-        height: 100%;
-    }
-    
-    @media screen and (min-width: 480px) {
+      <style>
+        body, html, .bg {
+            height: 100%;
+        }
+        
         .bg { 
-        	background: url(img/homepage.jpg) no-repeat center right fixed; 
+        	background: url(img/website_sheep_edited.png) no-repeat top center fixed; 
         	-webkit-background-size: cover;
         	-moz-background-size: cover;
         	-o-background-size: cover;
         	background-size: cover;
-        }
-    }
-    
-    @media screen and (max-width: 480px) {
-        .bg { 
-        	background: url(img/mobileHomepage.jpg) no-repeat center right fixed; 
-        	-webkit-background-size: cover;
-        	-moz-background-size: cover;
-        	-o-background-size: cover;
-        	background-size: cover;
-        }
-    }
-    </style>
+            
+    	}
+	</style>
   </head>
 
-  <body>
+  <body onresize="onResize()">
       <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container-fluid">
             <div class="navbar-header">
@@ -57,41 +49,44 @@
                 <li><a href="/directions/">Directions</a></li>
                 <li><a href="/hotels/">Hotels</a></li>
                 <li><a href="/registry/">Registry</a></li>
-                <li><a href="/rsvp/">RSVP</a></li>
+                <li><a class="active" href="/rsvp/">RSVP</a></li>
               </ul>
             </div>
           </div>
         </nav>
-        
-        <div class="bg" id="bg-home">
-                <div id="home-date">June 9, 2018</div>
+    
+        <div class="bg">
+            <div class="form-container" id="user-container">
+                <div class="white-text">
+                    Please enter your first and last name, as written on the invitation. (This should be the first and last name of only one person.)
+                    </div>
+                <form role="form" action="" method="post">
+                    <div class="form-group">
+                        <label class="sr-only" for="firstname">First Name</label>
+                        <input type="text" class="form-control" name="firstname" placeholder="First name">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="lastname">Last Name</label>
+                        <input type="text" class="form-control" name="lastname" placeholder="Last name">
+                    </div>
+                    <button type="submit" class="btn btn-default" name="guest_submit">RSVP for my party</button>
+    
+                </form>
                 
-            <audio id="contra_audio" src="contra.mp3" loop="loop"></audio>
+                <div class="error">
+                    <span class="not-found"><?php if ($not_found) { echo nl2br($not_found);} ?></span>
+                </div>
+            </div>
         </div>
         
+
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
         <script src="/js/onResize.js"></script>
-                <script src="//cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js"
-        type="text/javascript"></script>
-            <script src="js/cheatCode.js"></script>
-<!--
-    
-        .-"-.           .-"-.
-      .'=^=^='.       .'=^=^='.
-     /=^=^=^=^=\     /=^=^=^=^=\
-    :^=YouLost=^;   :^= Happy =^;
-    |^ TheGame ^|   |^ Easter! ^|
-    :^=^=^=^=^=^:   :^=^=^=^=^=^:
-     \=^=^=^=^=/     \=^=^=^=^=/
-      `.=^=^=.'       `.=^=^=.'
-        `~~~`           `~~~`
         
-        https://en.wikipedia.org/wiki/Konami_Code
-
--->
-</body>
+    </body>
 </html>

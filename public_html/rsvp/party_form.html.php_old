@@ -1,0 +1,82 @@
+<?php
+require_once("session_start.php");
+
+$party_row = $_SESSION['party_row'];
+$guests_array = $_SESSION['guests_array'];
+$reh = $_SESSION['reh'];
+$wed = $_SESSION['wed'];
+$bru = $_SESSION['bru'];
+$rehErr = $_SESSION['rehErr'];
+$wedErr = $_SESSION['wedErr'];
+$bruErr = $_SESSION['bruErr'];
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"    
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">    
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    .error {color: #FF0000;}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>RSVP for <?php echo $party_row[1]; ?> </h2>
+  <form method="post" action="" >
+    <?php
+    for($i=0;$i<$_SESSION['num_guests'];$i++)
+    {
+        ?>
+      <h3>Is <?php echo $guests_array[$i][1] . ' ' . $guests_array[$i][2]; ?> attending:</h3>
+      <?php if ($party_row[2]) {
+            ?>
+        <div class="well well-sm well-primary">
+            <input type="hidden" name="ques"/>Rehearsal Dinner at 6pm, Fri, June 8th?&nbsp&nbsp&nbsp&nbsp
+            <label class="radio-inline"><input type="radio" name="rehradio[<?php echo $i; ?>]" value='y' <?php if($reh[$i]==1) {echo "checked";}?>>Yes</label>
+            <label class="radio-inline"><input type="radio" name="rehradio[<?php echo $i; ?>]" value='n' <?php if(isset($reh[$i]) and $reh[$i]==0) {echo "checked";}?>>No</label>
+            <?php if ($rehErr[$i] != '') {?><span class="error"><?php echo '&nbsp&nbsp&nbsp* ' . $rehErr[$i];?></span><?php } ?>
+        </div>
+      <?php
+    }
+    ?>
+      
+      <div class="well well-sm well-primary">
+            <input type="hidden" name="ques"/>Wedding at 5pm, Saturday, June 9th?&nbsp&nbsp&nbsp&nbsp
+            <label class="radio-inline"><input type="radio" name="wedradio[<?php echo $i; ?>]" value='y' <?php if($wed[$i]==1) {echo "checked";}?>>Yes</label>
+            <label class="radio-inline"><input type="radio" name="wedradio[<?php echo $i; ?>]" value='n'<?php if(isset($wed[$i]) and $wed[$i]==0) {echo "checked";}?>>No</label>
+            <?php if ($wedErr[$i] != '') {?><span class="error"><?php echo '&nbsp&nbsp&nbsp* ' . $wedErr[$i];?></span><?php } ?>
+        </div>
+      
+      <div class="well well-sm well-primary">
+            <input type="hidden" name="ques"/>Brunch Sunday, June 10th? (details TBD)&nbsp&nbsp&nbsp&nbsp
+            <label class="radio-inline"><input type="radio" name="bruradio[<?php echo $i; ?>]" value='y' <?php if($bru[$i]==1) {echo "checked";}?>>Yes</label>
+            <label class="radio-inline"><input type="radio" name="bruradio[<?php echo $i; ?>]" value='n' <?php if(isset($bru[$i]) and $bru[$i]==0) {echo "checked";}?>>No</label>
+            <?php if ($bruErr[$i] != '') {?><span class="error"><?php echo '&nbsp&nbsp&nbsp* ' . $bruErr[$i];?></span><?php } ?>
+        </div>
+      
+        <?php
+    }
+    ?>
+      <div class="well well-sm well-primary">
+            <label for="comment">Comments / questions? (optional)</label>
+          <textarea class="form-control" rows="5" name="comment" id="comment"><?php echo $_SESSION['comment']; ?></textarea>
+        </div>
+      
+    <button type="submit" class="btn btn-success" name="party_submit"><?php if($party_row[5]) {echo "Update RSVP";} else{echo "Submit RSVP";}?></button>
+</form>
+</div>
+
+</body>
+</html>
+
+
+
+
+

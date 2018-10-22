@@ -1,0 +1,35 @@
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+              </button>
+              <a class="navbar-brand" href=/cesnu/>Ellie & and David</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li><a href="/cesnu/OurStory/">Our Story</a></li>
+                <li><a href="/cesnu/events/">Events</a></li>
+                <li><a href="/cesnu/directions/">Directions</a></li>
+                <li><a href="/cesnu/hotels/">Hotels</a></li>
+                <li><a class="active" href="/cesnu/registry/">Registry</a></li>
+                <li><a href="/cesnu/rsvp/">RSVP</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+<script>
+    $(function(){
+        var current = location.pathname;
+        $('#nav li a').each(function(){
+            var $this = $(this);
+            // if the current path is like this link, make it active
+            if($this.attr('href').indexOf(current) !== -1){
+                $this.addClass('active');
+            }
+        })
+    })
+</script>

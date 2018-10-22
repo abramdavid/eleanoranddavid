@@ -1,0 +1,185 @@
+* {
+    font-family: 'Mallanna', Arial, Helvetica, sans-serif;
+}
+ul.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align:center;
+}
+div.topnav-container {
+  width: 100%;
+}
+
+.navbar-brand {
+    font-size: 1.8em !important;
+}
+
+.nav a, .not-found{
+    font-size: 1.5em !important;
+}
+
+div.container-fluid {
+    background-color: #333;
+}
+
+ul.navbar-nav li a:hover:not(.active)  {
+    background-color: #111;
+}
+
+ul.navbar-nav li a.active {
+    color: white;
+    background-color: #666;
+}
+
+ul.navbar-nav li a:not(.active) {
+    color: white;
+}
+
+.navbar-header .navbar-brand {
+    color: white;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+p {color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 200%;
+}
+
+article, #party-container {
+    position: relative;
+    border-radius: 25px;
+    background: #333;
+    background: rgba(33, 33, 33, 0.7);
+    width: 90%;
+    margin: auto;
+}
+
+#hotels-article, #party-container {
+    background: rgba(33, 33, 33, 0.8);
+}
+
+#registry-article {
+    background: rgba(33, 33, 33, 0.5);
+}
+
+.bg a, #success {
+    color: #13e5fd;
+    text-decoration: none;
+}
+
+.bg a:hover {
+    color: #fdf713;
+}
+
+.row {
+    text-align: center;
+}
+.row > * {
+    margin: auto;
+}
+
+.page-title{
+    text-align: center;
+    color: white;
+    font-size: 350%;
+}
+
+#bg-home {
+        text-align: center;
+        position: relative;
+    }
+    
+#home-date {
+        position:absolute;
+        width:100%;
+        font-size: 350%;
+        margin: auto;
+        color: white;
+}
+@media screen and (min-width: 480px) {
+    #user-container {
+    	margin: 20px;
+    	width: 20%;
+    }
+    article {
+        top: 5%;
+    }
+}
+@media screen and (max-width: 480px) {
+    #user-container {
+    	margin: 10px;
+        }
+    article {
+        top: 90%;
+    }
+    #ourstory-article {
+        top: 0px;
+    }
+}
+#user-container .form-control, .btn-default {
+    font-size: 1.25em;
+}
+#user-container > .white-text {
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+#party-container .form-group {
+    font-size: 1.5em;
+}
+
+#party-container {
+    margin-top: 20px;
+}
+
+#first-date-button, #proposal-button {
+    background: #333;
+    color: white;
+}
+
+#proposal-button {
+    background: white;
+    color: #333;
+}
+.rounded {
+    border-radius: 25px;
+    
+}
+.shaded {
+    background: #333;
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+.form-inline {
+    margin: 20px 10px 0px 10px;
+}
+
+.white-text, .white-text h2, h3, label, input  {
+    color: white;
+}
+
+.margin-10px {
+    margin: 10px;
+}
+
+.error {
+    color: #fdf713;
+    margin-left: 10px;
+}
+
+html {overflow: hidden;}
+        
+.bg {overflow: auto;}

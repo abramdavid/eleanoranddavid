@@ -1,0 +1,29 @@
+<?php require_once("session_start.php"); ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"    
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">    
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">    
+  <head>    
+    <title>Form Example</title>    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    .error {color: #FF0000;}
+  </style>
+  </head>    
+  <body>    
+    <form action="" method="post">    
+      <div><label for="firstname">First name:    
+        <input type="text" name="firstname" id="firstname"/></label>
+      </div>    
+      <div><label for="lastname">Last name:    
+        <input type="text" name="lastname" id="lastname"/></label>    
+      </div>    
+    <button type="submit" class="btn btn-success" name="guest_submit">RSVP for Party</button>
+    </form>    
+      <p class='error'><?php if ($not_found) { echo nl2br($not_found);} ?></p>
+  </body>    
+</html>

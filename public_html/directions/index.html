@@ -12,31 +12,21 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Mallanna" />
     
-    <style>
-    body, html, .bg {
-        height: 100%;
-    }
-    
-    @media screen and (min-width: 480px) {
+      <style>
+        body, html, .bg {
+            height: 100%;
+        }
         .bg { 
-        	background: url(img/homepage.jpg) no-repeat center right fixed; 
+        	background: url(img/directions.jpg) no-repeat center center fixed; 
         	-webkit-background-size: cover;
         	-moz-background-size: cover;
         	-o-background-size: cover;
         	background-size: cover;
-        }
-    }
-    
-    @media screen and (max-width: 480px) {
-        .bg { 
-        	background: url(img/mobileHomepage.jpg) no-repeat center right fixed; 
-        	-webkit-background-size: cover;
-        	-moz-background-size: cover;
-        	-o-background-size: cover;
-        	background-size: cover;
-        }
-    }
-    </style>
+    	}
+          img {
+            max-width: 90%
+          }
+	</style>
   </head>
 
   <body>
@@ -54,44 +44,34 @@
               <ul class="nav navbar-nav">
                 <li><a href="/OurStory/">Our Story</a></li>
                 <li><a href="/events/">Events</a></li>
-                <li><a href="/directions/">Directions</a></li>
+                <li><a class="active" href="/directions/">Directions</a></li>
                 <li><a href="/hotels/">Hotels</a></li>
                 <li><a href="/registry/">Registry</a></li>
                 <li><a href="/rsvp/">RSVP</a></li>
               </ul>
+              <!--<ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>-->
             </div>
           </div>
         </nav>
-        
-        <div class="bg" id="bg-home">
-                <div id="home-date">June 9, 2018</div>
-                
-            <audio id="contra_audio" src="contra.mp3" loop="loop"></audio>
+    
+        <div class="bg">
+            <article id="directions-article">
+                <p>The Brooklyn Society for Ethical Culture is located at
+                <a href="https://goo.gl/maps/42xi45jzKMT2" target="_blank">53 Prospect Park West</a> in Brooklyn.
+<br/><br/>
+                    From the <a href="https://goo.gl/maps/YTYDdXWmCRH2" target="_blank">Hampton Inn</a>, guests can take the F, Q, or 4/5 trains.  Another option is to take a Lyft, since the Hampton Inn and the Brooklyn Society for Ethical Culture are only 2.5 miles apart.
+                </p>
+            </article>
+
         </div>
-        
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+                <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
         <script src="/js/onResize.js"></script>
-                <script src="//cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js"
-        type="text/javascript"></script>
-            <script src="js/cheatCode.js"></script>
-<!--
-    
-        .-"-.           .-"-.
-      .'=^=^='.       .'=^=^='.
-     /=^=^=^=^=\     /=^=^=^=^=\
-    :^=YouLost=^;   :^= Happy =^;
-    |^ TheGame ^|   |^ Easter! ^|
-    :^=^=^=^=^=^:   :^=^=^=^=^=^:
-     \=^=^=^=^=/     \=^=^=^=^=/
-      `.=^=^=.'       `.=^=^=.'
-        `~~~`           `~~~`
-        
-        https://en.wikipedia.org/wiki/Konami_Code
-
--->
-</body>
+    </body>
 </html>

@@ -1,2 +1,0 @@
-# eleanoranddavid
-Wedding website
